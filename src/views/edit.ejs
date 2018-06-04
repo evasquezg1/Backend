@@ -1,0 +1,27 @@
+<% include partials/_header %>
+	
+	<div class="container">
+		<div class="row">
+			<!-- FORM -->
+			<div class="col-md-5 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+						<form action="/edit/<%= task._id %>" method="POST">
+							<div class="form-group">
+								<input type="text" name="fullName" placeholder="Insert a Title" class="form-control" value="<%= task.fullName %>">
+							</div>
+							<div class="form-group">
+								<input type="text" name="city" value="<%= task.city %>" class="form-control">
+							</div>
+							<div class="form-group">
+								<input type="text" name="address" value="<%= task.address %>" class="form-control">
+							</div>
+							<button type="submit" class="btn btn-primary">
+								<i class="fa fa-edit"></i>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+<% include partials/_footer %>
